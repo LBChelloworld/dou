@@ -1,0 +1,63 @@
+.content{
+    overflow: hidden;
+}
+.titleHead {
+    line-height: 18px;
+    margin-bottom: 24px;
+    font-size: 18px;
+    display: inline-block;
+    font-weight: bold;
+    color: #333;
+}
+.menuList {
+    min-height: 600px;
+}
+.menuList li {
+    width: 306px;
+    height: 172px;
+    border-radius: 8px;
+    float: left;
+    position: relative;
+    margin-right: 41px;
+    margin-bottom: 41px;
+    overflow: hidden;
+}
+.menuList li:nth-child(3n+3){
+    margin-right: 0;
+}
+.menuList .cover {
+    display: block;
+    width: 306px;
+    height: 172px;
+    overflow: hidden;
+}
+.menuList img {
+    display: block;
+    width: 100%;
+}
+.menuList .menuInfo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.14);
+    text-align: center;
+    transition: .5s;
+}
+.menuList .name {
+    font-weight: bold;
+    padding-top: 75px;
+    font-size: 16px;
+    width: 290px;
+    color: #FFF;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.28);
+    margin: 0 auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.menuList li:hover .menuInfo{
+    background: rgba(0,0,0,0);
+    transition: .5s;
+}

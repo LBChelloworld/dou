@@ -1,0 +1,10 @@
+.act>a {
+    color: #FFB31A !important;
+    font-weight: bold;
+    border-bottom: 2px solid #FFB31A;
+}
+
+.active{
+    border-bottom: 0 !important;
+    font-weight: normal !important;
+}

@@ -1,0 +1,139 @@
+.content{
+    width: 1000px;
+    margin:90px auto;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+#left {
+    width: 690px;
+    float: left;
+}
+
+#banner {
+    display: block;
+    width: 690px;
+    height: 390px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+#banner img {
+    display: block;
+    width: 100%;
+}
+.rinfo {
+    margin-top: 20px;
+    padding: 9px 0 40px;
+}
+.rinfo .title {
+    font-size: 22px;
+    color: #333;
+    font-weight: bold;
+    line-height: 24px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.vcnum {
+    font-size: 13px;
+    color: #333;
+    margin-top: 20px;
+    position: relative;
+}
+.vcnum span {
+    font-size: 24px;
+    color: #FFB31A;
+    position: relative;
+    top: 2px;
+}
+.vcnum .collectnum {
+    margin-left: 40px;
+}
+.operate {
+    right: 0;
+    display: inline-block;
+    top: -3px;
+    position: absolute;
+}
+.operate .btnCollect {
+    display: inline-block;
+    width: 80px;
+    height: 34px;
+    border-radius: 4px;
+    color: #fff;
+    border: 1px solid #FFB31A;
+    font-size: 15px;
+    text-align: center;
+    line-height: 32px;
+    background: #FFB31A url(https://cp1.douguo.com/static/nweb/images/star1.png?1) no-repeat 15px 10px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.operate .hascoll {
+    background: #FFB31A url(https://cp1.douguo.com/static/nweb/images/star2.png?1) no-repeat 7px 10px;
+    padding-left: 17px;
+}
+
+.rinfo .autInfo {
+    font-size: 16px;
+    color: #666;
+    margin: 25px 0;
+    overflow: hidden;
+}
+
+.authorImg{
+    float: left;
+}
+.authorImg img{
+    border-radius: 50%;
+}
+.rinfo .authorInfo {
+    font-size: 16px;
+    color: #666;
+    margin-left: 6px;
+    position: relative;
+    margin-right: 20px;
+    float: left;
+}
+.rinfo .nickname {
+    font-size: 13px;
+    color: #333;
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.rinfo .gz {
+    float: left;
+    height: 30px;
+    width: 73px;
+    line-height: 28px;
+    text-align: center;
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.rinfo .addicon {
+    font-size: 14px;
+}
+
+.rinfo .intro {
+    font-size: 15px;
+    color: #333;
+    line-height: 27px;
+}
+
+#right {
+    width: 280px;
+    float: right;
+}
+#right>img{
+    width: 240px;
+    margin-left:20px;
+    border-radius: 8px;
+}

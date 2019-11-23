@@ -1,0 +1,105 @@
+#footer {
+    width: 100%;
+    margin-top: 60px;
+    background: #f8f8f8;
+    font-size: 12px 
+}
+.dginfo {
+    background: #f2f2f2;
+}
+.dgintro {
+    width: 1000px;
+    position: relative;
+    height: 188px;
+    margin: 0 auto;
+    padding-top: 94px;
+}
+.dgintro .logo {
+    width: 147px;
+    left: 0;
+    top: 35px;
+    position: absolute;
+}
+.wb100 {
+    display: block;
+    width: 100%;
+}
+.dgintro .datainfo {
+    width: 690px;
+}
+.dgintro .datainfo h1 {
+    color: #999;
+    font-size: 14px;
+}
+.dgintro .datainfo p {
+    color: #999;
+    line-height: 160%;
+    margin-top: 10px;
+}
+.dgintro .datainfo span {
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 24px;
+    color: #84b92c;
+    line-height: 160%;
+}
+.dgintro .threbl {
+    width: 312px;
+    position: absolute;
+    top: 16px;
+    left: 690px;
+}
+.dgintro h3 {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+}
+.dgintro ul li {
+    width: 92px;
+    float: left;
+    margin-right: 12px;
+    text-align: center;
+}
+.dgintro ul li img{
+    width: 92px;
+    height: 92px;
+    display: block;
+    margin-bottom: 8px;
+}
+#footer .foot {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+#footer .clink {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin: 15px 0;
+    position: relative;
+}
+#footer .clink span {
+    color: #6b553f;
+    cursor: pointer;
+}
+
+#footer .foot img{
+    margin-bottom: -3px;
+    width:20px;
+    display: inline-block;
+}
+#footer .foot .tv{
+    display: block;
+    text-align: center;
+    margin-top:5px;
+}
+#footer .foot span{
+    margin: 0 2px;
+    cursor: pointer;
+}
+#footer .botfans {
+    padding: 15px 0 20px 370px;
+}
+.cght{
+    text-align: center;
+}

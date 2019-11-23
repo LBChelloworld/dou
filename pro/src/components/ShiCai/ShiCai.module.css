@@ -1,0 +1,51 @@
+.content{
+    overflow: hidden;
+}
+.titleHead {
+    line-height: 18px;
+    margin-bottom: 24px;
+    font-size: 18px;
+    display: inline-block;
+    font-weight: bold;
+    color: #333;
+}
+
+.type h4 {
+    float: left;
+    cursor: auto;
+    border-radius: 4px;
+    background-color: #FFF0D2;
+    font-size: 16px;
+    width: 152px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+}
+
+.type ul {
+    float: left;
+    width: 848px;
+}
+
+.type li {
+    float: left;
+    width: 56px;
+    text-align: center;
+    font-size: 13px;
+    margin-left: 21px;
+    margin-bottom: 30px;
+}
+.type li img {
+    width: 56px;
+    height: 56px;
+    border-radius: 4px;
+    display: block;
+}
+.type li h5 {
+    font-size: 13px;
+    line-height: 13px;
+    padding-top: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

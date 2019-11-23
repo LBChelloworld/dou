@@ -1,0 +1,73 @@
+.content{
+    width: 1000px;
+    margin: 60px auto;
+    margin-bottom: 0;
+}
+.head{
+    font-size: 18px;
+    display: inline-block;
+    font-weight: bold;
+    color: #333;
+    margin:20px 0;
+}
+.cookList {
+    min-height: 600px;
+}
+.cookList li {
+    width: 690px;
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+.cookList .cookImg {
+    width: 180px;
+    height: 125px;
+    float: left;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 15px;
+}
+.cookList .cookInfo {
+    width: 495px;
+    height: 125px;
+    float: left;
+}
+.cookInfo .cookname {
+    padding-top: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    overflow: hidden;
+    line-height: 18px;
+    display: inline-block;
+    width: 400px;
+    margin-bottom: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #333;
+}
+.cookInfo .autNum {
+    font-size: 14px;
+    line-height: 22px;
+    height: 24px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 50px;
+}
+.cookInfo .headicon {
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.cookInfo .headicon img {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    vertical-align: middle;
+    border-radius: 50%;
+    position: relative;
+    top: -2px;
+}
+.cookInfo .uname{
+    margin-left: 5px;
+    color: #333;
+}

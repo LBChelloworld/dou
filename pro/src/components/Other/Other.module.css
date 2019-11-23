@@ -1,0 +1,206 @@
+.content{
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#left {
+    width: 690px;
+    float: left;
+}
+#right {
+    width: 280px;
+    float: right;
+}
+
+.content .title {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 40px;
+    line-height: 20px;
+}
+.materialList {
+    width: 690px;
+    height: 276px;
+    background: #F1F7FA;
+    margin-top: 20px;
+    padding: 4px 3px 24px;
+    border-radius: 8px;
+}
+.materialList .item {
+    margin: 20px 17px 0;
+    width: 80px;
+    height: 104px;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+    font-size: 13px;
+}
+.materialList .item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px;
+    display: block;
+    border-radius: 4px;
+}
+.materialList .item a {
+    color: #333;
+    text-decoration: none;
+}
+.materialList .item a:hover{
+    color: #FFB31A;
+}
+
+.hotArticle {
+    height: 112px;
+    margin: 20px 0 30px;
+}
+
+.hotArticle .cover {
+    width: 200px;
+    height: 112px;
+    float: left;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.hotArticle .info {
+    width: 478px;
+    height: 112px;
+    margin: 3px 0 0 12px;
+    float: left;
+}
+.hotArticle .name {
+    font-size: 16px;
+    line-height: 30px;
+    display: block;
+    height: 60px;
+    max-height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #333;
+}
+
+.hotArticle .sourAuth {
+    margin-top: 25px;
+    font-size: 13px;
+    line-height: 13px;
+}
+
+.hotArticle .source {
+    margin-right: 55px;
+}
+.hotArticle a{
+    color: #333;
+}
+
+.hotArticle a:hover{
+    color: #FFB31A;
+}
+.alist{
+    overflow: hidden;
+}
+.alist li {
+    width: 320px;
+    float: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 10px 0;
+}
+.alist li:nth-child(2n+2){
+    margin-left: 50px;
+}
+.alist li a{
+    color: #333;
+}
+
+.alist li a:hover{
+    color: #FFB31A;
+}
+
+
+.content .more {
+    font-size: 13px;
+    color: #256DC6;
+    float: right;
+    height: 20px;
+    line-height: 20px;
+    font-weight: normal;
+    vertical-align: middle;
+}
+.content .more img {
+    height: 10px;
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.br{
+    border-radius: 5px;
+    float: left;
+}
+.drList li {
+    margin-top: 20px;
+    height: 46px;
+}
+.drList .info {
+    margin-left: 6px;
+    width: 130px;
+    height: 100%;
+    float: left;
+}
+.drList .nickname {
+    display: inline-block;
+    max-width: 120px;
+    font-size: 15px;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #333;
+}
+.proicon {
+    margin-left: 3px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.proicon .proimg {
+    display: block;
+    width: 100%;
+}
+.fans {
+    font-size: 12px;
+    color: #999;
+    margin-top: 8px;
+}
+
+.drList .gz {
+    float: right;
+    color: #333;
+    border: 1px solid #333;
+    width: 73px;
+    height: 30px;
+    line-height: 28px;
+    text-align: center;
+    margin-top: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.drList .addicon {
+    font-size: 14px;
+}
+.dmList li {
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 13px;
+}
+.dmList li a{
+    color: #333;
+    margin-left:5px;
+}

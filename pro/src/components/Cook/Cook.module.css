@@ -1,0 +1,94 @@
+.title {
+    font-size: 20px;
+    color: #333;
+    line-height: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+#jxlist{
+    overflow: hidden;
+}
+#jxlist .item {
+    float: left;
+    width: 300px;
+    height: 255px;
+    overflow: hidden;
+    margin: 0 40px 40px 0;
+}
+#jxlist .item:nth-child(3n+3){
+    margin-right: 0;
+}
+#jxlist .cover {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    display: block;
+    background: #F9F9F9;
+}
+#jxlist .cover img {
+    width: 300px;
+}
+#jxlist .cookname {
+    display: block;
+    font-size: 15px;
+    color: #333;
+    line-height: 15px;
+    padding: 10px 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#jxlist .pinfo{
+    position: relative;
+}
+#jxlist .author {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #333;
+}
+#jxlist .author img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: bottom;
+    float: left;
+}
+#jxlist .viewColl {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 0.3rem;
+}
+#jxlist .view::before {
+    width: 17px;
+    height: 12px;
+    background: url(https://cp1.douguo.com/static/nweb/images/view2.png?2);
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 2px;
+    position: relative;
+    top: -1px;
+}
+#jxlist .collect {
+    margin-left: 6px;
+}
+#jxlist .collect::before {
+    width: 14px;
+    height: 13px;
+    background: url(https://cp1.douguo.com/static/nweb/images/collect2.png?2);
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 2px;
+    position: relative;
+    top: -1px;
+}

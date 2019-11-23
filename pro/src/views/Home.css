@@ -1,0 +1,31 @@
+.ant-carousel{
+  margin-top:60px !important;
+}
+.ant-carousel .slick-slide {
+    text-align: center;
+    overflow: hidden;
+  }
+  
+.ant-carousel .slick-slide img {
+  width: 100%;
+}
+.ant-carousel .slick-dots li button{
+    display: block;
+    width: 8px;
+    height: 8px !important;
+    border-radius: 8px !important;
+}
+
+.btn{
+  position: relative;
+  top: -250px;
+}
+.btn .pre{
+  position: absolute;
+  left: 50px;
+}
+.btn .next{
+  position: absolute;
+  right: 50px;
+}
+
