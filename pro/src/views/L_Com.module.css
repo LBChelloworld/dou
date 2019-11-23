@@ -1,0 +1,265 @@
+/* 头部样式 */
+.loheader {
+    width: 100%;
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #f3f3f3;
+}
+.htop {
+    width: 940px;
+    margin: 0 auto;
+    height: 90px;
+}
+.htop .hlogo {
+    float: left;
+    width: 180px;
+    height: 54px;
+    background: url(https://passport.douguo.com/public/img/web/logo_lo.png) no-repeat 0 0;
+    line-height: 10em;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.htop .hlogo a {
+    width: 180px;
+    display: inline-block;
+}
+.iput {
+    color: #999;
+    width: 312px;
+    padding: 10px 0;
+    position: relative;
+    margin-bottom: 10px;
+}
+input::-webkit-input-placeholder{
+    color:#999;
+}
+.dlsi {
+    width: 300px;
+    height: 26px;
+    line-height: 26px;
+    vertical-align: middle;
+    padding: 6px 0px 5px 10px;
+    font-size: 14px;
+    border: 1px solid #deded3;
+    background: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    color: #555;
+    box-sizing: content-box;
+}
+.dlsi:focus{
+    box-shadow: 0 0 4px 1px rgba(32, 157, 230, .4);
+    border-color:#a5d4ed ;
+    transition: border linear .2s,box-shadow linear .2s;
+}
+.focus_text{
+    margin: 5px 0 0 2px;
+    display: none;
+    position: absolute;
+    color: #EC7309;
+}
+.tymm {
+    padding: 5px 0 10px 0;
+    width: 300px;
+    overflow: hidden;
+    visibility: hidden;
+}
+#erryan{
+    display: none;
+    margin-left: 55px;
+    color:#EC7309;
+}
+.yzma {
+    width: 105px;
+    height: 22px;
+    line-height: 22px;
+    vertical-align: middle;
+    padding: 5px 0px 5px 15px;
+    font-size: 12px;
+    border: 1px solid #deded3;
+    background: #fff;
+    border-radius: 5px;
+    color: #555;
+    float: left;
+    box-sizing: content-box;
+
+}
+.yzma:focus{
+    box-shadow: 0 0 4px 1px rgba(32, 157, 230, .4);
+    border-color:#a5d4ed ;
+    transition: border linear .2s,box-shadow linear .2s;
+}
+#bgi{
+    background: rgb(231, 242, 247);
+    width: 90px;
+    height: 30px;
+    float: left;
+    padding-left:5px;
+    padding-bottom: 5px;
+    margin-left:3px;
+    margin-top: 0px;
+    box-sizing: border-box;
+}
+.itemStr{
+    float: left;
+    margin:2px;
+}
+.see{
+    float: left;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    color: green;
+    line-height: 30px;
+    font-size: 13px;
+}
+.see:hover{
+    color: red;
+    text-decoration: underline;
+}
+.forg {
+    padding: 5px 0 15px 0;
+    font-size: 14px;
+}
+.mtsu{
+    margin: 0 0 10px 0;
+}
+.btnrlo {
+    width: 310px;
+    height: 42px;
+    border: 0px;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 42px;
+    font-size: 14px;
+    display: inline-block;
+    background: #FFB31A;
+}
+.otth h3 {
+    color: #333;
+    font: 14px "Microsoft Yahei",Tahoma,Geneva,sans-serif;
+    margin: 20px 0 15px 0;
+}
+.otth ul {
+    width: 310px;
+    border-top: 1px dotted #dedede;
+}
+.otth ul li {
+    width: 310px;
+    border-bottom: 1px dotted #dedede;
+    height: 40px;
+}
+.otth ul li a {
+    width: 76px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #333;
+    display: inline-block;
+}
+.otth ul li a i{
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 3px;
+    vertical-align: middle;
+    background: url(https://passport.douguo.com/public/img/web/loicon.png) no-repeat;
+}
+.otth ul li a .ic_xlwb {
+    background-position: -32px -47px;
+}
+.otth ul li a .ic_txzh {
+    background-position: -3px -47px;
+}
+.ml36{
+    margin-left: 36px;
+}
+#footer{
+    width: 100%;
+    margin-top: 30px;
+}
+.foot{
+    overflow: hidden;
+    width: 940px;
+    margin: 0 auto;
+}
+#footer .clink {
+    width: 940px;
+    float: left;
+    text-align: center;
+    margin: 15px 0;
+}
+#footer .clink a {
+    color: #6b553f;
+}
+.cght {
+    width: 100%;
+    float: left;
+    color: #999;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+#footer .cght a {
+    color: #999;
+}
+.box{
+    width: 940px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(100,100,100,.1);
+    border-radius: 2px;
+    padding: 0 50px;
+}
+.regh{
+    width: 940px;
+    height: 58px;
+    border-bottom: 1px solid #f8f8f7;
+    position: relative;
+}
+.regh h2{
+    font-weight: normal;
+    font: 18px "Microsoft Yahei",Tahoma,Geneva,sans-serif;
+    width: 200px;
+    position: absolute;
+    left: 32px;
+    line-height: 58px;
+}
+.regh span{
+    font: 16px "Microsoft Yahei",Tahoma,Geneva,sans-serif;
+    position: absolute;
+    width: 300px;
+    right: 65px;
+    line-height: 58px;
+    display: block;
+    text-align: right;
+}
+.num{
+    display: none;
+    clear: both;
+    position: relative;
+    top: 8px;
+    color: #f5222d;
+    line-height: 1px;
+    transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.name{
+    display: none;
+    clear: both;
+    position: relative;
+    top: 8px;
+    color: #f5222d;
+    line-height: 1px;
+    transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.strong{
+    display: inline-block;
+    position: relative;
+    right: 0;
+}

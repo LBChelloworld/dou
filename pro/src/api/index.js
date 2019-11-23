@@ -1,8 +1,7 @@
 import axios from 'axios';
 
-let baseUrl ="http://47.96.143.29:5432";
+let baseUrl ="http://47.96.143.29:5433";
 // axios.defaults.headers.common['Authorization'] ="Bearer "+localStorage.getItem("token");
-let headers="application/json";
 
 export const GET = (url,params)=>{
     return axios.get(`${baseUrl}${url}`,{params:params}).then(data=>data);
