@@ -108,6 +108,7 @@ export const getname=(params)=>{
 export const getlogin=(params)=>{
     return API.POST("/users/login",params)
 }
+
 //用户注册
 export const getregister=(params)=>{
     return API.POST("/users/register",params)
@@ -117,4 +118,19 @@ export const getSee = (params)=>{
     return API.GET("/users/getSee",params)
 }
 
-// export const getAccount;
+//查询关注数量
+export const getSeeNum=(params)=>{
+    return API.GET("/users/getSeeNum",params)
+}
+
+
+//查询收藏菜单id
+export const selectCollect=(params)=>{
+    return API.POST("/users/selectCollect",params)
+}
+
+//查看我的粉丝
+export const selectFans=(params)=>{
+    return API.POST("/users/selectFans",params)
+}
+

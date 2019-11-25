@@ -1,0 +1,136 @@
+.notMenu {
+    width: 1000px;
+    margin: 80px 0 330px;
+    font-size: 13px;
+    text-align: center;
+}
+.cooklist{
+    margin-top: 25px;
+    min-height: 600px;
+}
+.cooklist li{
+    position: relative;
+    width: 306px;
+    margin-right: 41px;
+    margin-bottom: 41px;
+    float:left
+}
+.cooklist li:nth-child(3n){
+    margin-right:0 ;
+}
+.fimg{
+    width: 306px;
+    height: 172px;
+    background: #f9f9f9;
+    display: inline-block;
+    border-radius:8px;
+    overflow: hidden;
+}
+.fimg img{
+    display: block;
+    width: 100%;
+}
+.ftitle{
+    display: block;
+    font-size: 15px;
+    height: 35px;
+    line-height: 35px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.cooklist p{
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+}
+.fview{
+    vertical-align: middle;
+    display: inline-block;
+    width: 17px;
+    height: 12px;
+    background: url(https://cp1.douguo.com/static/nweb/images/view.png?4) no-repeat;
+    background-size: 100%;
+    position: relative;
+    top: -1px;
+}
+.fcollect{
+    vertical-align: middle;
+    display: inline-block;
+    width: 14px;
+    height: 13px;
+    margin-left: 10px;
+    background: url(https://cp1.douguo.com/static/nweb/images/favorite.png?4) no-repeat;
+    background-size: 100%;
+    position: relative;
+    top: -1px;
+}
+.seelist{
+    width: 100%;
+    margin-top: 25px;
+    min-height: 600px;
+}
+.seelist li{
+    width: 236px;
+    height: 110px;
+    margin-right: 146px;
+    margin-bottom: 40px;
+    float: left;
+}
+.uleft{
+    width: 80px;
+    font-size: 0;
+    margin-right: 10px;
+    float: left;
+}
+.uimg{
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin-left: 6px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.uimg img{
+    width: 100%;
+    height: 100%;
+}
+.uright{
+    float: right;
+    width: 137px;
+    margin-right: 9px;
+}
+.uright h3{
+    font-size: 15px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 6px;
+}
+.uright p{
+    color: #999;
+}
+.uright .sdesc{
+    margin: 8px 0;
+    font-size: 13px;
+    width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.uright h3:hover{
+    color: #FFB31A
+}
+.ubtn{
+    display: inline-block;
+    width: 80px;
+    margin-top: 14px;
+    height: 30px;
+    line-height: 28px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    color: #333;
+    font-size: 12px;
+    text-align: center;
+}

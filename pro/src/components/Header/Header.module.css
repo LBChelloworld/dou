@@ -186,6 +186,8 @@
     float: left;
     line-height: 46px;
     color: #333;
+    border-bottom: 0 ;
+    font-weight: normal ;
 }
 .nav .imore span{
     color: #256DC6;
@@ -220,6 +222,8 @@
     height: 30px;
     display: inline-block;
     overflow: hidden;
+    border-bottom: 0 ;
+    font-weight: normal ;
 }
 
 #header .headicon img{
@@ -227,6 +231,7 @@
     display: block;
     width: 100%;
     height: 100%;
+    
 }
 
 #header .myinfo {
@@ -253,6 +258,8 @@
     display: block;
     text-align: center;
     font-size: 13px;
+    font-weight: normal;
+    border-bottom: 0;
 }
 #header .myinfo .arwwj {
     height: 15px;

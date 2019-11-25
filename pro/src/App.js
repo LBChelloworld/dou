@@ -9,6 +9,7 @@ import SearchContent from './views/SearchContent'
 import LoginIndex from './views/LoginIndex'
 import Animate from './components/Animate/Animate';
 import Medicine from './components/medicine/Medicine';
+import My from './components/My/UserDetail'
 import './App.css';
 
 function App() {
@@ -34,6 +35,12 @@ function App() {
             <Route path='/login' component={LoginIndex}></Route>
             <Route path='/animate' component={Animate}></Route>
             <Route path='/medicine' component={Medicine}></Route>
+
+            <Route path='/my' component={My}></Route>
+            <Route path="/myall" component={My}></Route>
+            <Route path="/mycollect" component={My}></Route>
+            <Route path="/mysee" component={My}></Route>
+            <Route path="/myfans" component={My}></Route>
 
             <Redirect to="/home"></Redirect>
           </Switch>

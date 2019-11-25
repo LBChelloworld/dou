@@ -1,4 +1,7 @@
 /* 头部样式 */
+body{
+    background: #f3f3f3 !important;
+}
 .loheader {
     width: 100%;
     margin-bottom: 40px;

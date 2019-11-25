@@ -7,7 +7,7 @@ import ShiCaiDetail from '../ShiCaiDetail/ShiCaiDetail'
 import FoodDetail from '../FoodDetail/FoodDetail'
 import Menu from '../Menu/Menu'
 
-import './caiContent.css'
+import caiContent from './caiContent.css'
 
 export default class CaiContent extends Component {
     constructor(props){
