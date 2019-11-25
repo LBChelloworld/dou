@@ -23,14 +23,6 @@ export const getAnimate=(params)=>{
 export const getmedicine=(params)=>{
     return API.GET('/getmedicine',params);
 }
-// //商品详情
-// export const getProDtl=(params)=>{
-//     return API.GET('/api/v1/admin/products/'+id,{});
-// }
-// //删除商品
-// export const delPro=(pid)=>{
-//     return API.POST('/deleteProd',{"pid":pid})
-// }
 
 //查询手机号
 export const getphone=(params)=>{
@@ -46,11 +38,58 @@ export const getname=(params)=>{
 export const getlogin=(params)=>{
     return API.POST("/users/login",params)
 }
+
 //用户注册
 export const getregister=(params)=>{
     return API.POST("/users/register",params)
 }
 
+//查寻用户信息
+export const showUser=(params)=>{
+    return API.GET("/users/showUser",params)
+}
 
+//查询关注数量
+export const getSeeNum=(params)=>{
+    return API.GET("/users/getSeeNum",params)
+}
 
-// export const getAccount;
+//查询粉丝数量
+export const getFansNum=(params)=>{
+    return API.GET("/users/getFansNum",params)
+}
+
+//查询收藏菜单id
+export const selectCollect=(params)=>{
+    return API.POST("/users/selectCollect",params)
+}
+
+//查询收藏菜单样子
+export const detail=(params)=>{
+    return API.GET("/menu/detail",params)
+}
+
+//查询关注的人
+export const getSee=(params)=>{
+    return API.GET("/users/getSee",params)
+}
+
+//查看我的粉丝
+export const selectFans=(params)=>{
+    return API.POST("/users/selectFans",params)
+}
+
+//取消关注
+export const cancelSee=(params)=>{
+    return API.POST("/users/cancelSee",params)
+}
+
+//关注
+export const See=(params)=>{
+    return API.POST("/users/See",params)
+}
+
+//是否关注
+export const ifSee=(params)=>{
+    return API.POST("/users/ifSee",params)
+}

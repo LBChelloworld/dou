@@ -4,6 +4,7 @@ import login from './Login.module.css'
 import { NavLink } from 'react-router-dom'
 import * as api from '../api/getInfo'
 import { message} from 'antd';
+import 'antd/dist/antd.css'
 
 export default class Login extends Component {
     constructor(props) {
@@ -81,12 +82,11 @@ export default class Login extends Component {
         if (this.state.flag1 && this.state.flag2 && this.state.flag3) {
             let unum = this.refs.nameValue.value
             let upwd = this.refs.pwd.value
-            console.log(unum, upwd)
             api.getlogin({ unum: unum, upwd: upwd }).then((data) => {
                 if(data.data.code=="200"){
                     message.success('登陆成功');
-                    window.location.href="/home"
-                    localStorage.setItem(data.data.da)
+                    localStorage.setItem("uid",data.data.result[0].uid)
+                    window.location.href="/my"
                 }else {
                     message.error('用户名或密码错误');
                 }

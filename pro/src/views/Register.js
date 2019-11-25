@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 import * as api from '../api/getInfo'
 import { Form, Input, Checkbox, Button } from 'antd';
 import { message} from 'antd';
+import 'antd/dist/antd.css'
 
 class RegistrationForm extends React.Component {
   constructor(props) {
