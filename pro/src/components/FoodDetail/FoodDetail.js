@@ -5,6 +5,7 @@ import cook from './FoodDetail.module.css'
 
 import * as getInfo from '../../api/getInfo'
 
+import 'antd/dist/antd.css';
 import { message } from 'antd'
 
 export default class CookDetail extends Component {
@@ -113,7 +114,7 @@ export default class CookDetail extends Component {
                 this.refs.gz.innerText = "关注";
                 this.refs.add.style.display = 'inline-block';
                 getInfo.cancelSee({ lid: this.state.user.uid, uid: uid }).then((data) => {
-                    message.success(data.data.msg);
+                    message.warning(data.data.msg);
                 })
             } else {
                 this.refs.gz.innerText = "已关注";

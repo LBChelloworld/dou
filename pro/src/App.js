@@ -6,7 +6,11 @@ import Article from './views/Article'
 import CaiDetail from './views/CaiDetail'
 import CookDetail from './views/CookDetail'
 import SearchContent from './views/SearchContent'
-import './App.css'
+import LoginIndex from './views/LoginIndex'
+import Animate from './components/Animate/Animate';
+import Medicine from './components/medicine/Medicine';
+import './App.css';
+
 function App() {
   return (
     <div>
@@ -18,8 +22,8 @@ function App() {
 
             <Route path="/cook" component={Cai}></Route>
             <Route path="/shicai" component={Cai}></Route>
-            <Route path="/shicaiDetail" component={Cai}></Route>
-            <Route path="/foodDetail" component={Cai}></Route>
+            {/* <Route path="/shicaiDetail" component={Cai}></Route> */}
+            {/* <Route path="/foodDetail" component={Cai}></Route> */}
             <Route path="/menu" component={Cai}></Route>
 
             <Route path="/article" component={Article}></Route>
@@ -27,12 +31,19 @@ function App() {
             <Route path="/foodDetail" component={CookDetail}></Route>
             <Route path="/search" component={SearchContent}></Route>
 
+            <Route path='/login' component={LoginIndex}></Route>
+            <Route path='/animate' component={Animate}></Route>
+            <Route path='/medicine' component={Medicine}></Route>
+
             <Redirect to="/home"></Redirect>
           </Switch>
         </div>
       </Router>
     </div>
-  );
+  )
 }
+
+
+
 
 export default App;

@@ -8,9 +8,9 @@ export default class Selected extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            list: [],
+            list: [{}],
             arr: [],
-            uList: [{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}]
+            uList: [{}]
         }
     }
     componentDidMount() {
@@ -61,20 +61,20 @@ export default class Selected extends Component {
                 </h2>
                 <ul className={selected.recipeList}>
                     {
-                        this.state.list.map((item,i) => {
+                        this.state.uList.map((item,i) => {
                             return (
-                                <li className={selected.item} key={item.fid}>
-                                    <NavLink to={{pathname:"/foodDetail",state:{id:item.fid}}} className={selected.cover}>
-                                        <img src={item.fimg} alt="" />
+                                <li className={selected.item} key={i}>
+                                    <NavLink to={{pathname:"/foodDetail",state:{id:this.state.list[i].fid}}} className={selected.cover}>
+                                        <img src={this.state.list[i].fimg} alt="" />
                                     </NavLink>
                                     <div>
                                         <NavLink to={{pathname:"/foodDetail",state:{id:item.fid}}} className={selected.name}>
-                                            {item.ftitle}
+                                            {this.state.list[i].ftitle}
                                         </NavLink>
                                         <p className={selected.author}>
                                             by&nbsp;&nbsp;
                                             <NavLink to={{ pathname: "/userDetail", query: { id: item.uid } }} className={selected.textLips}>
-                                                {this.state.uList[0].uname}
+                                                {item.uname}
                                             </NavLink>
                                             {/* <a className={selected.proicon} href="/user/prodesc" target="_blank">
                                                 <img className={selected.proimg} src="https://i1.douguo.com/upload/note/d/a/a/da84247847aebe48d9dd0fcdac88862a.png" alt="" />

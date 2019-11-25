@@ -9,7 +9,6 @@ export default class Cook extends Component {
         super(props);
         this.state = {
             list: [],
-            // arr: [],//用户id
             uList: [] //用户信息
         }
         this.page = 0;

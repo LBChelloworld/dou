@@ -89,3 +89,32 @@ export const ifSee=(params)=>{
 export const pageMenu = (params)=>{
     return API.GET('/users/pageMenu',params);
 }
+//获取药品信息
+export const getmedicine=(params)=>{
+    return API.GET('/getmedicine',params);
+}
+
+//查询手机号
+export const getphone=(params)=>{
+    return API.POST("/users/phone",params)
+}
+
+//查询名字
+export const getname=(params)=>{
+    return API.POST("/users/name",params)
+}
+
+//用户登陆
+export const getlogin=(params)=>{
+    return API.POST("/users/login",params)
+}
+//用户注册
+export const getregister=(params)=>{
+    return API.POST("/users/register",params)
+}
+
+export const getSee = (params)=>{
+    return API.GET("/users/getSee",params)
+}
+
+// export const getAccount;

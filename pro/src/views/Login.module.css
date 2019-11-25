@@ -1,0 +1,65 @@
+/* 登录main样式 */
+#main {
+    width: 940px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.bgsi {
+    width: 540px;
+    float: left;
+}
+.bgsi .shic {
+    width: 540px;
+    text-align: center;
+    margin-top: 78px;
+}
+.silo {
+    background-color: #fff;
+    width: 400px;
+    min-height: 480px;
+    float: right;
+    box-shadow: 0 1px 3px rgba(100,100,100,.1);
+    border-radius: 2px;
+    font-family: "Microsoft Yahei",Tahoma,Geneva,sans-serif;
+}
+.silo .wizh1 {
+    width: 400px;
+    height: 56px;
+    border-bottom: 1px solid #f8f8f7;
+    position: relative;
+}
+.silo .wizh1 h2 {
+    font-weight: normal;
+    font: 18px "Microsoft Yahei",Tahoma,Geneva,sans-serif;
+    width: 150px;
+    position: absolute;
+    left: 30px;
+    line-height: 56px;
+}
+.silo .wizh1 span {
+    font: 16px "Microsoft Yahei",Tahoma,Geneva,sans-serif;
+    width: 200px;
+    position: absolute;
+    right: 18px;
+    line-height: 56px;
+    display: block;
+    text-align: right;
+}
+.silo .wizh1 span a {
+    color: #3ea000;
+}
+
+.silo .logone {
+    width: 350px;
+    float: left;
+    margin: 30px 0 0 45px;
+    font-family: "Microsoft Yahei",Tahoma,Geneva,sans-serif;
+}
+.reload{
+    color: #ED145B;
+    cursor: pointer;
+}
+.form{
+    width: 540px;
+    float: left;
+}

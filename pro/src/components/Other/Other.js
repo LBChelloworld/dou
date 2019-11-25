@@ -16,9 +16,11 @@ export default class Other extends Component {
             fList: [], //菜单列表
             animate: [],//动漫列表
             vip: [],//达人列表
-            uArr:[],//存放用户ID
-            fans:[] //存放粉丝数
+            uArr: [],//存放用户ID
+            fans: [], //存放粉丝数
+            lArr: [],//当前用户关注的用户的id
         }
+        this.flag = [false, false, false, false, false];
     }
 
     componentDidMount() {
@@ -66,35 +68,85 @@ export default class Other extends Component {
         })
 
         //达人
-        getInfo.showVip().then((data) => {
-            this.setState({
-                vip: data.data.data
-            })
-        }).then(()=>{
-            var uArr = [];
-            this.state.vip.map((item)=>{
-                uArr.push(item.uid);
-            });
-            this.setState({
-                uArr,
-            });
-
-            this.getFans().then((data)=>{
+        getInfo.showVip()
+            .then((data) => {
                 this.setState({
-                    fans: data
+                    vip: data.data.data
                 })
-            });
-        })
+            })
+            .then(() => {
+                var uArr = [];
+                this.state.vip.map((item) => {
+                    uArr.push(item.uid);
+                });
+                this.setState({
+                    uArr,
+                });
+
+                this.getFans().then((data) => {
+                    this.setState({
+                        fans: data
+                    })
+                });
+            })
+            .then(() => {
+                var uid = localStorage.getItem("uid");
+                if (uid != null) {
+                    getInfo.getSee({ uid: uid })
+                        .then((data) => {
+                            var larr = [];
+                            for (let i = 0; i < data.data.data.length; i++) {
+                                larr.push(data.data.data[i].lid)
+                            }
+                            this.setState({
+                                lArr: larr
+                            })
+                        })
+                        .then(() => {
+                            for (let i = 0; i < this.state.uArr.length; i++) {
+                                for (let j = 0; j < this.state.lArr.length; j++) {
+                                    if (this.state.uArr[i] === this.state.lArr[j]) {
+                                        this.flag[i] = true;
+                                    }
+                                }
+                            }
+                        })
+                        .then(() => {
+                            for (let i = 0; i < this.flag.length; i++) {
+                                if (this.flag[i]) {
+                                    document.getElementById("userList").children[i].children[2].innerHTML = '已关注';
+                                }
+                            }
+                        })
+
+                }
+            })
     }
     async getFans() {
         var Fans = [];
         for (let i = 0; i < this.state.uArr.length; i++) {
-           var a = await  getInfo.getFans({ uid: this.state.uArr[i] })
+            var a = await getInfo.getFans({ uid: this.state.uArr[i] })
                 .then((data) => {
                     Fans.push(data.data.data);
                 })
         }
         return Fans;
+    }
+    gz(e, i) {
+        var uid = localStorage.getItem("uid");
+        var lid = e.target.getAttribute("data-id");
+        this.flag[i] = !this.flag[i];
+        if (this.flag[i]) {
+            e.target.innerText = '已关注';
+            getInfo.See({ lid: lid, uid: uid }).then((data) => {
+                message.success(data.data.msg);
+            })
+        } else {
+            e.target.innerHTML = '+&nbsp;关注';
+            getInfo.cancelSee({ lid: lid, uid: uid }).then((data) => {
+                message.success(data.data.msg);
+            })
+        }
     }
     render() {
         return (
@@ -162,9 +214,9 @@ export default class Other extends Component {
                                 <img src="https://cp1.douguo.com/static/nweb/images//more2.png?1" alt="" />
                             </NavLink>
                         </h2>
-                        <ul className={other.drList}>
+                        <ul className={other.drList} id="userList">
                             {
-                                this.state.vip.map((item,i) => {
+                                this.state.vip.map((item, i) => {
                                     return (
                                         <li key={item.uid}>
                                             <NavLink className={other.headicon} to="/userDetail">
@@ -181,9 +233,8 @@ export default class Other extends Component {
                                                 </div>
                                                 <p className={other.fans}>{this.state.fans[i]}粉丝</p>
                                             </div>
-                                            <div className={other.gz}>
-                                                <span className={other.addicon}>+</span>
-                                                &nbsp;<span>关注</span>
+                                            <div className={other.gz} onClick={(e) => this.gz(e, i)} data-id={item.uid}>
+                                                +&nbsp;关注
                                             </div>
                                         </li>
                                     )
@@ -201,7 +252,7 @@ export default class Other extends Component {
                                     return (
                                         <li key={item.aid}>
                                             <strong>·</strong>
-                                            <NavLink to={{ pathname: "/cartoon", state: { id: item.aid } }}>
+                                            <NavLink to={{ pathname: "/animate", state: { id: item.aid } }}>
                                                 {item.atitle}
                                             </NavLink>
                                         </li>
