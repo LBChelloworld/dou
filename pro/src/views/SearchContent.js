@@ -6,14 +6,15 @@ import Footer from '../components/Footer/Footer'
 export default class SearchContent extends Component {
     constructor(props){
         super(props);
+        // console.log(this.props)
         this.state = {
-            name:decodeURI(this.props.location.search).split("=")[1]
+            name:this.props.location.state.name
         }
     }
     render() {
         return (
             <div>
-                <Header name="cai" se={this.state.name}></Header>
+                <Header name="cai" se={this.state.name} props={this.props}></Header>
                 <Search name={this.state.name}></Search>
                 <Footer></Footer>
             </div>

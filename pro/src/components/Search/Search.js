@@ -6,6 +6,7 @@ import * as getInfo from '../../api/getInfo'
 export default class Search extends Component {
     constructor(props) {
         super(props);
+        // console.log(this.props)
         this.state = {
             list: [],
             name: this.props.name,

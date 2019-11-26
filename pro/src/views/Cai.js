@@ -15,7 +15,7 @@ export default class Cai extends Component {
     render() {
         return (
             <div>
-                <Header name="cai" />
+                <Header name="cai"  props={this.props}/>
                 <CaiContent></CaiContent>
                 <Footer />
             </div>

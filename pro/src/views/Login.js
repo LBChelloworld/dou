@@ -85,7 +85,9 @@ export default class Login extends Component {
             api.getlogin({ unum: unum, upwd: upwd }).then((data) => {
                 if(data.data.code=="200"){
                     message.success('登陆成功');
-                    window.location.href="/#/home"
+                    // window.location.href="/home"
+                    console.log(this.props);
+                    this.props.history.push({pathname:"/home",state:{uid:data.data.result[0].uid}});
                     localStorage.setItem("uid",data.data.result[0].uid)
                 }else {
                     message.error('用户名或密码错误');
@@ -98,7 +100,13 @@ export default class Login extends Component {
     render() {
         return (
             <div>
-                
+                {/* 头部展示 */}
+                <div className={com.loheader}>
+                    <div className={com.htop}>
+                        <div className={com.hlogo}><a title="豆果美食" href="/index">豆果美食</a></div>
+                    </div>
+                </div>
+
                 <div id={login.main}>
                     {/* 左侧图片 */}
                     <div className={login.bgsi}>
@@ -178,6 +186,25 @@ export default class Login extends Component {
                         </div>
                     </div>
                 </div>
+            
+                 {/* 底部展示 */}
+                 <div id={com.footer}>
+                    <div className={com.foot}>
+                        <div className={com.clink}>
+                            <a href="http://www.douguo.com/about.html" rel="nofollow" target="_blank">关于豆果</a> ·
+                            <a href="http://www.douguo.com/hr.html" rel="nofollow" target="_blank">在豆果工作</a> ·
+                            <a href="http://www.douguo.com/user/feedback" rel="nofollow" target="_blank">意见反馈</a> ·
+                            <a href="http://www.douguo.com/links.html" target="_blank">友情链接</a> ·
+                            <a href="http://www.douguo.com/allrecipes/" target="_blank">菜谱大全</a> ·
+                            <a href="http://www.douguo.com/brand" target="_blank">品牌馆</a>
+                        </div>
+                    </div>
+                    <div className={com.cght}>
+                        ©2009-2015 <a href="http://www.douguo.com" target="_blank">北京豆果信息技术有限公司</a> <a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow">京ICP证111032号</a> 京公网安备11010102001133号 京网文[2014]0774-174号
+                    </div>
+
+                </div>
+            
             </div>
         )
     }

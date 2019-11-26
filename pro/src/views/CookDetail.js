@@ -14,7 +14,7 @@ export default class CaiDetail extends Component {
     render() {
         return (
             <div>
-                <Header name="cai"/>
+                <Header name="cai" props={this.props}/>
                 <FoodDetail id={this.props.location.state.id}></FoodDetail>
                 <Footer/>
             </div>

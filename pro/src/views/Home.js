@@ -8,6 +8,11 @@ import { Carousel } from 'antd';
 
 import './Home.css'
 export default class Home extends Component {
+    constructor(props){
+        super(props);
+        // console.log(this.props.location.state.uid);
+        this.uid = this.props.location.state == undefined ? null : this.props.location.state.uid;
+    }
     onChange(a, b, c) {
         console.log(a, b, c);
     }
@@ -20,7 +25,7 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-                <Header name="home"></Header>
+                <Header name="home" uid={this.uid} props={this.props}></Header>
                 {/* 轮播图 */}
                 <Carousel autoplay ref="img">
                     <div>

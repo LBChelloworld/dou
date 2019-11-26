@@ -6,7 +6,8 @@ import Article from './views/Article'
 import CaiDetail from './views/CaiDetail'
 import CookDetail from './views/CookDetail'
 import SearchContent from './views/SearchContent'
-import LoginIndex from './views/LoginIndex'
+import Login from './views/Login'
+import Register from './views/Register'
 import Animate from './components/Animate/Animate';
 import Medicine from './components/medicine/Medicine';
 import My from './components/My/UserDetail'
@@ -32,7 +33,8 @@ function App() {
             <Route path="/foodDetail" component={CookDetail}></Route>
             <Route path="/search" component={SearchContent}></Route>
 
-            <Route path='/login' component={LoginIndex}></Route>
+            <Route path='/login' component={Login}></Route>
+            <Route path='/register' component={Register}></Route>
             <Route path='/animate' component={Animate}></Route>
             <Route path='/medicine' component={Medicine}></Route>
 

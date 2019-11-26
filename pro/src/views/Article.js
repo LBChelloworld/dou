@@ -6,7 +6,7 @@ export default class Article extends Component {
     render() {
         return (
             <div>
-                <Header name="article"></Header>
+                <Header name="article" props={this.props}></Header>
                 <ArticleContent></ArticleContent>
                 <Footer></Footer>
             </div>

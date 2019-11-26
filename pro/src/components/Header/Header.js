@@ -9,12 +9,13 @@ import * as getInfo from '../../api/getInfo'
 export default class Header extends Component {
     constructor(props) {
         super(props);
+        // console.log(props)
         this.state = {
             one: [],
             two: [],
             three: [],
             four: [],
-            uhead: ''
+            uhead: '',
         }
     }
     componentDidMount() {
@@ -64,11 +65,12 @@ export default class Header extends Component {
                 four: data.data.data.splice(193, 7),
             })
         })
-        if (localStorage.getItem("uid") == null) {
+        if (this.props.uid == null && localStorage.getItem("uid")==null) {
             this.refs.uhead.style.display = 'none';
             this.refs.login.style.display = 'block';
         } else {
-            getInfo.showUser({ uid: localStorage.getItem("uid") }).then((data) => {
+            var uid = this.props.uid == null ? localStorage.getItem("uid") : this.props.uid;
+            getInfo.showUser({ uid:uid}).then((data) => {
                 this.setState({
                     uhead: data.data.data[0].uhead
                 })
@@ -95,7 +97,8 @@ export default class Header extends Component {
         this.refs.ctip.style.display = "none";
     }
     search() {
-        window.location.href = encodeURI('/search?name=' + this.refs.txt.value);
+        // window.location.href = encodeURI('/search?name=' + this.refs.txt.value);
+        this.props.props.history.push({pathname:"/search",state:{name:this.refs.txt.value}})
     }
     close(){
         if (this.props.name !== 'cai') {

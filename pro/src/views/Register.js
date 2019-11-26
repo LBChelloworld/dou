@@ -3,7 +3,7 @@ import com from './L_Com.module.css'
 import { NavLink } from 'react-router-dom'
 import * as api from '../api/getInfo'
 import { Form, Input, Checkbox, Button } from 'antd';
-import { message} from 'antd';
+import { message } from 'antd';
 import 'antd/dist/antd.css'
 
 class RegistrationForm extends React.Component {
@@ -11,84 +11,85 @@ class RegistrationForm extends React.Component {
     super(props)
     this.state = {
       phoneMsg: "",
-      name1:false,
-      num1:false
+      name1: false,
+      num1: false
     }
   }
   state = {
     confirmDirty: false,
     autoCompleteResult: [],
   };
-//用户名判断
-  name(){
-    var nameDc=document.getElementById("name")
-    if (this.props.form.getFieldValue("nickname")==undefined || this.props.form.getFieldValue("nickname")=="") {
+  //用户名判断
+  name() {
+    var nameDc = document.getElementById("name")
+    if (this.props.form.getFieldValue("nickname") == undefined || this.props.form.getFieldValue("nickname") == "") {
       nameDc.style.display = "block";
       nameDc.innerText = "请输入用户名!";
-      nameDc.style.color="red"
+      nameDc.style.color = "red"
     } else {
       api.getname({ uname: this.props.form.getFieldValue("nickname") }).then((data) => {
-          nameDc.innerText = data.data.msg;
-          nameDc.style.display = "block";
-          if(data.data.code==203){
-            nameDc.style.color="red"
-          }else{
-            nameDc.style.color="green"
-            this.state.name1=true
-          }
+        nameDc.innerText = data.data.msg;
+        nameDc.style.display = "block";
+        if (data.data.code == 203) {
+          nameDc.style.color = "red"
+        } else {
+          nameDc.style.color = "green"
+          this.state.name1 = true
+        }
       })
     }
   }
   //手机输入框判断
   phone() {
-    var phoneDc=document.getElementById("num")
-    if (this.props.form.getFieldValue("phone")==undefined || this.props.form.getFieldValue("phone")=="") {
+    var phoneDc = document.getElementById("num")
+    if (this.props.form.getFieldValue("phone") == undefined || this.props.form.getFieldValue("phone") == "") {
       phoneDc.style.display = "block";
       phoneDc.style.color = "red";
       phoneDc.innerText = "请输入手机号!";
-    } else if(!(/^[1]([3-9])[0-9]{9}$/.test(this.props.form.getFieldValue("phone")))){
+    } else if (!(/^[1]([3-9])[0-9]{9}$/.test(this.props.form.getFieldValue("phone")))) {
       phoneDc.innerText = "请输入正确的手机号!";
       phoneDc.style.color = "red";
       phoneDc.style.display = "block";
-    }else{
+    } else {
       api.getphone({ unum: this.props.form.getFieldValue("phone") }).then((data) => {
         this.setState({ phoneMsg: data.data.msg })
-          phoneDc.innerText = data.data.msg;
-          phoneDc.style.display = "block";
-          if(data.data.code==203){
-            phoneDc.style.color = "red"
-          }else{
-            phoneDc.style.color = "green"
-            this.state.name1=true
-          }
-      })      
+        phoneDc.innerText = data.data.msg;
+        phoneDc.style.display = "block";
+        if (data.data.code == 203) {
+          phoneDc.style.color = "red"
+        } else {
+          phoneDc.style.color = "green"
+          this.state.num1 = true
+        }
+      })
     }
   }
 
   handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFieldsAndScroll((err, values) => {
-      console.log(this.state.name1,this.state.num1)
-      if (!err && this.state.name1 && this.state.num1 ) {
-        if(values.agreement==true){
-          var str={
-            uname:values.nickname,  
-            unum:values.phone,
-            upwd:values.password
+      console.log(this.state.name1, this.state.num1)
+      if (!err && this.state.name1 && this.state.num1) {
+        if (values.agreement == true) {
+          var str = {
+            uname: values.nickname,
+            unum: values.phone,
+            upwd: values.password
           }
-          api.getregister(str).then((data)=>{
-            if(data.data.code==400){
+          api.getregister(str).then((data) => {
+            if (data.data.code == 400) {
               message.warning("注册失败");
-            }else{
+            } else {
               message.success("注册成功")
+              console.log(this.props)
+              this.props.history.push("/login");
             }
           })
-        }else{
+        } else {
           message.warning("请仔细阅读豆果协议");
         }
-      }else{
+      } else {
         message.warning("请认真填写");
-
       }
     });
   };
@@ -115,7 +116,7 @@ class RegistrationForm extends React.Component {
   };
   render() {
     const { getFieldDecorator } = this.props.form;
-    
+
     const formItemLayout = {
       labelCol: {
         xs: { span: 20 },
@@ -139,7 +140,16 @@ class RegistrationForm extends React.Component {
       },
     };
     return (
+
       <div className={com.box}>
+
+        {/* 头部展示 */}
+        <div className={com.loheader}>
+          <div className={com.htop}>
+            <div className={com.hlogo}><a title="豆果美食" href="/index">豆果美食</a></div>
+          </div>
+        </div>
+
         <div className={com.regh}>
           <h2>新用户注册</h2>
           <span>
@@ -147,7 +157,7 @@ class RegistrationForm extends React.Component {
           </span>
         </div>
         <Form {...formItemLayout} onSubmit={this.handleSubmit}>
-                                          {/* 用户名 */}
+          {/* 用户名 */}
           <Form.Item
             label={
               <span>
@@ -157,17 +167,17 @@ class RegistrationForm extends React.Component {
           >
             {getFieldDecorator('nickname', {
               rules: [{ required: true, message: ' ', whitespace: true }],
-            })(<Input onBlur={() => this.name()} placeholder="请输入用户名"/>)}
+            })(<Input onBlur={() => this.name()} placeholder="请输入用户名" />)}
             <div id="name" className={com.name}>用户名已存在</div>
           </Form.Item>
-                                              {/* 手机号 */}
+          {/* 手机号 */}
           <Form.Item label="手机号">
             {getFieldDecorator('phone', {
               rules: [{ required: true, message: ' ' }],
-            })(<Input onBlur={() => this.phone()} placeholder="请输入手机号"/>)}
+            })(<Input onBlur={() => this.phone()} placeholder="请输入手机号" />)}
             <div id="num" className={com.num}>请输入正确的手机号</div>
           </Form.Item>
-                                              {/* 密码 */}
+          {/* 密码 */}
           <Form.Item label="密码" hasFeedback>
             {getFieldDecorator('password', {
               rules: [
@@ -179,10 +189,10 @@ class RegistrationForm extends React.Component {
                   validator: this.validateToNextPassword,
                 },
               ],
-            })(<Input.Password placeholder="请输入密码"/>)}
-            
+            })(<Input.Password placeholder="请输入密码" />)}
+
           </Form.Item>
-                                                {/* 确认密码 */}
+          {/* 确认密码 */}
           <Form.Item label="确认密码" hasFeedback>
             {getFieldDecorator('confirm', {
               rules: [
@@ -194,9 +204,9 @@ class RegistrationForm extends React.Component {
                   validator: this.compareToFirstPassword,
                 },
               ],
-            })(<Input.Password onBlur={this.handleConfirmBlur} placeholder="再次确认密码"/>)}
+            })(<Input.Password onBlur={this.handleConfirmBlur} placeholder="再次确认密码" />)}
           </Form.Item>
-          
+
           <Form.Item {...tailFormItemLayout}>
             {getFieldDecorator('agreement', {
               valuePropName: 'checked',
@@ -212,6 +222,24 @@ class RegistrationForm extends React.Component {
             </Button>
           </Form.Item>
         </Form>
+
+        {/* 底部展示 */}
+        <div id={com.footer}>
+          <div className={com.foot}>
+            <div className={com.clink}>
+              <a href="http://www.douguo.com/about.html" rel="nofollow" target="_blank">关于豆果</a> ·
+                            <a href="http://www.douguo.com/hr.html" rel="nofollow" target="_blank">在豆果工作</a> ·
+                            <a href="http://www.douguo.com/user/feedback" rel="nofollow" target="_blank">意见反馈</a> ·
+                            <a href="http://www.douguo.com/links.html" target="_blank">友情链接</a> ·
+                            <a href="http://www.douguo.com/allrecipes/" target="_blank">菜谱大全</a> ·
+                            <a href="http://www.douguo.com/brand" target="_blank">品牌馆</a>
+            </div>
+          </div>
+          <div className={com.cght}>
+            ©2009-2015 <a href="http://www.douguo.com" target="_blank">北京豆果信息技术有限公司</a> <a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow">京ICP证111032号</a> 京公网安备11010102001133号 京网文[2014]0774-174号
+                    </div>
+
+        </div>
 
       </div>
     );

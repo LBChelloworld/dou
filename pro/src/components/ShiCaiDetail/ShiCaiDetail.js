@@ -15,12 +15,13 @@ export default class ShiCaiDetail extends Component {
         document.documentElement.scrollTop = document.body.scrollTop = 0;
     }
     componentWillReceiveProps(){
+        // console.log(this.props.location.state.id)
         let id = this.props.id == undefined ? this.props.location.state.id : this.props.id;
         getInfo.getFoodDetail({ cid: id }).then((data) => {
             this.setState({
                 list: data.data.data[0]
             })
-            console.log(this.state.list);
+            // console.log(this.state.list);
         }).then(() => {
             var title = this.state.list.cname.split("")[0]
             getInfo.Search({ ftitle: title }).then((data) => {
